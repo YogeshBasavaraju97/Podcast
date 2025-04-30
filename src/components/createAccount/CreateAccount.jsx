@@ -9,7 +9,7 @@ import { validateSignup } from "@/helper/validateSigup";
 export default function CreateAccount() {
 
 
-  const [UserName, setUserName] = useState("Yog");
+  const [UserName, setUserName] = useState("");
   const [emailId, setEmailId] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
