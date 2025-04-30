@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import axios from "axios";
-import "./uploadPopUp.css";
+import styles from "./UploadPopUp.module.css";
 import ytLogo from "../../../public/ytLogo.png";
 import Image from "next/image";
 import toast from "react-hot-toast";
@@ -24,9 +24,9 @@ export default function UploadPopUp({ isOpen, onUpload, onClose, projectId }) {
       });
       toast.success("Transcript uploaded successfully");
       onUpload("success");
-      setName(""); // optional: reset fields
+      setName("");
       setTranscript("");
-      onClose(); // optional: close popup after upload
+      onClose();
     } catch (err) {
       console.error("Upload failed:", err);
       toast.error("Upload failed");
@@ -36,34 +36,34 @@ export default function UploadPopUp({ isOpen, onUpload, onClose, projectId }) {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay">
-      <div className="modal">
-        <div className="modal-header">
+    <div className={styles.modalOverlay}>
+      <div className={styles.modal}>
+        <div className={styles.modalHeader}>
           <Image src={ytLogo} width={40} alt="YouTube Logo" />
-          <h2 className="uploadHeading">Upload from Youtube</h2>
-          <span className="close-button" onClick={onClose}>
+          <h2 className={styles.uploadHeading}>Upload from YouTube</h2>
+          <span className={styles.closeButton} onClick={onClose}>
             &times;
           </span>
         </div>
 
-        <div className="modal-body">
+        <div className={styles.modalBody}>
           <label>Name</label>
           <input
             type="text"
-            className="input-field"
+            className={styles.inputField}
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
 
           <label>Transcript</label>
           <textarea
-            className="textarea-field"
+            className={styles.textareaField}
             value={transcript}
             onChange={(e) => setTranscript(e.target.value)}
           />
 
-          <div className="uploadButton">
-            <button className="upload-button" onClick={handleUpload}>
+          <div className={styles.uploadButtonContainer}>
+            <button className={styles.uploadButton} onClick={handleUpload}>
               Upload
             </button>
           </div>
