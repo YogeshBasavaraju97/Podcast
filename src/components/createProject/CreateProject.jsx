@@ -28,7 +28,7 @@ export default function CreateProject() {
       const response = await axios.post("/api/projects", { name: projectName }, { withCredentials: true });
 
       if (response.status === 200) {
-        router.push("/");
+        router.push("/projects");
       }
     } catch (error) {
     }

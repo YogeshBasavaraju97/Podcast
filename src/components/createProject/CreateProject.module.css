@@ -55,8 +55,9 @@
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  width: 230px;
   gap: 8px;
 }
 

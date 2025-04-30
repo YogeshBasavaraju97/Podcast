@@ -18,7 +18,7 @@ export default function Projects() {
   const [error, setError] = useState('');
   const [projectName, setProjectName] = useState('');
   const router = useRouter();
-  useProfile();
+  const { userData } = useProfile();
 
 
   const modalRef = useRef(null);

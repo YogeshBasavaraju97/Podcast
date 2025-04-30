@@ -15,7 +15,7 @@ import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 
 export default function AddPodcast() {
-  useProfile();
+  const { userData } = useProfile();
   const [isPopupOpen, setPopupOpen] = useState(false);
   const [listOfPodCast, setListOfPodcast] = useState([]);
   const [loading, setLoading] = useState(true);
