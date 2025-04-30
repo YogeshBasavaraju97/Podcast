@@ -1,0 +1,279 @@
+.pageWrapper {
+  min-height: 100vh;
+  background: #fff;
+  padding: 30px;
+  margin: 30px;
+  font-weight: 600;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading1 {
+  font-weight: 500;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoIcon {
+  font-size: 28px;
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4b0082;
+}
+
+.aiText {
+  color: #6a0dad;
+}
+
+.iconsSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Main Content */
+.mainContent {
+  margin-top: 40px;
+}
+
+.projectsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.projectsHeader h2 {
+  font-size: 30px;
+  color: #6a0dad;
+}
+
+
+
+.createButton {
+  background-color: #211935;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Projects Grid */
+.projectsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.projectCard {
+  display: flex;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 130px
+}
+
+.projectIcon {
+  background: #f0ad4e;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectDetails h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #4b0082;
+}
+
+.projectDetails p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.editedText {
+  color: #999;
+}
+
+/* 
+/* Modal Popup */
+/* .modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.modalContent input {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+}
+
+.errorText {
+  color: red;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancelButton {
+  background: none;
+  color: red;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+} */
+
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContent {
+
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.modalContent h2 {
+
+  margin-top: 0;
+}
+
+.modalItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+
+
+}
+
+.modalContent input {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.errorText {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancelButton {
+  background: none;
+  color: red;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.createButtonPop {
+  background: #6a0dad;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.headingCreate {
+  margin-bottom: 20px;
+}
+
+.errorText {
+  color: red;
+}

@@ -1,0 +1,95 @@
+.accountSettingsContainer {
+  padding: 40px;
+  background: #f9f9f9;
+  height: 100vh;
+  /* fills the full height of the viewport */
+  box-sizing: border-box;
+  /* makes padding included in height */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.backArrow {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.profileImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.inputFields {
+  display: flex;
+  gap: 30px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.inputGroup input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  min-width: 250px;
+  font-size: 16px;
+}
+
+.editHeading {
+  display: flex;
+  align-items: center;
+  /* THIS will vertically center */
+  gap: 10px;
+  /* spacing between arrow and text */
+}
+
+.backLink {
+  display: flex;
+  /* Make Link behave like a flex container */
+  align-items: center;
+}
+
+.editHeading h3 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.saveButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #6a00ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.saveButton:hover {
+  background-color: white;
+  color: #6a00ff;
+  border-radius: 1px solid #6a00ff;
+}
