@@ -33,7 +33,7 @@ export default function Projects() {
       const response = await axios.post("/api/projects", { name: projectName }, { withCredentials: true });
       console.log(response);
       if (response.status === 200) {
-        router.push("/podcast");
+        router.push("/projects");
       }
     } catch (error) {
     }

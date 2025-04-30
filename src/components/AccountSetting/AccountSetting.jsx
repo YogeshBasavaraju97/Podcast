@@ -9,12 +9,14 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { addUser } from '@/utils/userSlice';
 import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
 
 export default function AccountSettings() {
   const { userData, fetchProfile } = useProfile();
   const [userName, setUserName] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const dispatch = useDispatch();
+  const router = useRouter();
 
 
   useEffect(() => {
@@ -49,9 +51,9 @@ export default function AccountSettings() {
   return (
     <div className={styles.accountSettingsContainer}>
       <div className={styles.header}>
-        <Link href="#" className={styles.backLink}>
+        <div onClick={() => router.back()} className={styles.backLink}>
           <FaArrowLeft color="black" size={20} />
-        </Link>
+        </div>
         <h2>Account Settings</h2>
       </div>
 
