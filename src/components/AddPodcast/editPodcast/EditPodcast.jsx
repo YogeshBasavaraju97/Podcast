@@ -2,14 +2,15 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./EditPodcast.module.css";
 import { FaArrowLeft } from "react-icons/fa";
-import Link from 'next/link';
+
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
 
 const EditPodcast = ({ id }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [text, setText] = useState("");
-
+  const router = useRouter();
   const fetchData = async () => {
     const res = await axios.get(`/api/transcript/${id}`);
     console.log(res);
@@ -45,9 +46,9 @@ const EditPodcast = ({ id }) => {
       <div className={styles.editTranscriptContainer}>
         <div className={styles.alignEditButton}>
           <div className={styles.editHeading}>
-            <Link href="#" className={styles.backLink}>
+            <div onClick={() => router.back()} className={styles.backLink}>
               <FaArrowLeft color="black" size={20} />
-            </Link>
+            </div>
             <h3>Edit Transcript</h3>
           </div>
           <div>

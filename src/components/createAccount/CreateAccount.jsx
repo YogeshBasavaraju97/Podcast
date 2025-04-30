@@ -5,6 +5,7 @@ import "./CreateAccount.css";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { validateSignup } from "@/helper/validateSigup";
+import { useRouter } from "next/navigation";
 
 export default function CreateAccount() {
 
@@ -13,12 +14,14 @@ export default function CreateAccount() {
   const [emailId, setEmailId] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const router = useRouter();
 
   const [error, setError] = useState("");
 
 
 
   const handleSubmit = async () => {
+
     setError("");
     const errorMessage = validateSignup({ UserName, emailId, password, confirmPassword });
     if (errorMessage) {
@@ -27,7 +30,7 @@ export default function CreateAccount() {
       return;
     }
 
-    console.log(UserName, emailId, password, confirmPassword);
+
 
 
     if (password !== confirmPassword) {
@@ -43,7 +46,8 @@ export default function CreateAccount() {
 
       }, { withCredentials: true });
       toast.success("Signup successful!");
-      console.log(res);
+      router.push("/login");
+
 
 
     } catch (error) {

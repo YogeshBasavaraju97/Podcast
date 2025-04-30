@@ -7,7 +7,7 @@ import rss from '../../../public/rss.png';
 import yt from '../../../public/yt.png';
 import uploadIcon from '../../../public/uploadIcon.png';
 import cloud from '../../../public/uploadCloud.png';
-import UploadPopUp from './UploadPopUp';
+import UploadPopUp from './uploadPopUp/UploadPopUp';
 import axios from 'axios';
 import useProfile from '@/hooks/useProfile';
 import { useParams } from 'next/navigation';

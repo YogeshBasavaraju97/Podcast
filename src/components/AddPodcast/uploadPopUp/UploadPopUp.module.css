@@ -1,5 +1,6 @@
-/* Modal Overlay */
-.modal-overlay {
+/* UploadPopUp.module.css */
+
+.modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +11,7 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
-  font-family: poppins;
+  font-family: 'Poppins', sans-serif;
 }
 
 .uploadHeading {
@@ -18,7 +19,6 @@
   color: #3C3C3C;
 }
 
-/* Modal */
 .modal {
   background: white;
   width: 600px;
@@ -27,35 +27,30 @@
   position: relative;
 }
 
-/* Modal Header */
-.modal-header {
+.modalHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* YouTube Icon */
-.youtube-icon {
+.youtubeIcon {
   font-size: 30px;
   margin-right: 10px;
 }
 
-/* Close Button */
-.close-button {
+.closeButton {
   font-size: 24px;
   cursor: pointer;
 }
 
-/* Modal Body */
-.modal-body {
+.modalBody {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
 
-/* Input Fields */
-.input-field,
-.textarea-field {
+.inputField,
+.textareaField {
   width: 100%;
   margin-top: 5px;
   margin-bottom: 15px;
@@ -65,15 +60,18 @@
   font-size: medium;
 }
 
-/* Textarea Special Styling */
-.textarea-field {
+.textareaField {
   height: 120px;
   border: 1px solid #ccc;
-  /* Orange border */
 }
 
-/* Upload Button */
-.upload-button {
+.uploadButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  /* <- fixed */
+}
+
+.uploadButton {
   display: flex;
   justify-content: center;
   background: #1a133f;
@@ -82,20 +80,14 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 100px
+  width: 100px;
 }
 
-/* Open Button */
-.open-button {
+.openButton {
   background: #6a00ff;
   color: white;
   padding: 8px 16px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.uploadButton {
-  display: flex;
-  justify-content: end;
 }

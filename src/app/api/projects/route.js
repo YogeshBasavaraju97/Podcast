@@ -23,16 +23,18 @@ export async function POST(req) {
 }
 
 
-
-export async function GET() {
+export async function GET(req) {
   try {
     await dbConnect();
-    const user = await userAuth(req);
+    const user = await userAuth(req); // get logged-in user
 
     const projectsWithStats = await Project.aggregate([
       {
+        $match: { owner: user._id } // ✅ Filter by authenticated user
+      },
+      {
         $lookup: {
-          from: 'transcripts', // collection name in MongoDB (lowercase plural)
+          from: 'transcripts',
           localField: '_id',
           foreignField: 'projectId',
           as: 'transcripts'

@@ -8,6 +8,7 @@ import useProfile from '@/hooks/useProfile';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { addUser } from '@/utils/userSlice';
+import toast from 'react-hot-toast';
 
 export default function AccountSettings() {
   const { userData, fetchProfile } = useProfile();
@@ -35,6 +36,7 @@ export default function AccountSettings() {
       const response = await axios.put('/api/profile/', { UserName: userName }, {
         withCredentials: true,
       });
+      toast.success("username updated");
       dispatch(addUser(response?.data?.user));
     } catch (error) {
       console.log(error);

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import axios from "axios";
 import styles from "./UploadPopUp.module.css";
-import ytLogo from "../../../public/ytLogo.png";
+import ytLogo from "../../../../public/ytLogo.png";
 import Image from "next/image";
 import toast from "react-hot-toast";
 

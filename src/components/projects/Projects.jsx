@@ -95,7 +95,7 @@ export default function Projects() {
         <div className={styles.projectsGrid}>
           {projects.map((project) => (
             <div key={project._id} className={styles.projectCard} onClick={() => handleProject(project._id)}>
-              <div className={styles.projectIcon}>SP</div>
+              <div className={styles.projectIcon}>{project.name.charAt(0)}</div>
               <div className={styles.projectDetails}>
                 <h3 className={styles.heading1}>{project.name}</h3>
                 <p>{project.transcriptCount} Files</p>
