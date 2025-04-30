@@ -10,11 +10,13 @@ import { useRouter } from 'next/navigation';
 const EditPodcast = ({ id }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [text, setText] = useState("");
+  const [initialState, setInitialState] = useState('');
   const router = useRouter();
   const fetchData = async () => {
     const res = await axios.get(`/api/transcript/${id}`);
-    console.log(res);
+
     setText(res.data?.transcript?.content || "");
+    setInitialState(res.data?.transcript?.content || "");
   };
 
 
@@ -37,7 +39,7 @@ const EditPodcast = ({ id }) => {
   };
 
   const handleDiscard = () => {
-    console.log("Discarding edits...");
+    setText(initialState);
     setIsEditing(false);
   };
 
